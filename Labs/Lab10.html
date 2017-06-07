@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		JavaScript lab 10
+	</title>
+	<!--
+		Kevin Esser
+	-->
+	<script type="text/javascript">
+		function showArray()
+		{
+			var maandArray = new Array("januari", "februari", "maart", 
+									"april", "mei", "juni", 
+									"juli", "augustus", "september", 
+									"oktober", "november", "december");
+		
+			var dagArray = new Array("zondag", "maandag", 
+							"dinsdag", "woensdag", 
+							"donderdag", "vrijdag", "zaterdag");
+
+			document.writeln("Deze array heeft 7 elementen: <br>" + dagArray[0] + "<br>" + dagArray[1] + 
+									"<br>" + dagArray[2] + "<br>" + dagArray[3] + "<br>" + dagArray[4] + 
+									"<br>" + dagArray[5] + "<br>" + dagArray[6]);
+									
+			document.writeln("<br><br> Deze array heeft 12 elementen: <br>" + maandArray[0] + "<br>" + maandArray[1] + 
+									"<br>" + maandArray[2] + "<br>" + maandArray[3] + "<br>" + maandArray[4] + 
+									"<br>" + maandArray[5] + "<br>" + maandArray[6] + "<br>" + maandArray[7] + 
+									"<br>" + maandArray[8] + maandArray[9] + "<br>" + maandArray[10] + 
+									"<br>" + maandArray[11]);
+		}
+	</script>
+</head>
+<body>
+	<h3>JavaScript Lab 10</h3>
+	<script type="text/javascript">
+		showArray();		
+	</script>
+</body>
+</html>

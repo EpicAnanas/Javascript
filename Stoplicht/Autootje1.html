@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Stoplicht
+	</title>
+	<!-- Kevin Esser -->
+</head>
+<body background="Foto's/kruising.png">
+	<form>
+		<h1>Autootje1.html</h1>
+		<p>Een trapautootje laten rijden</p>
+		<p>Druk op de knop om een stukje te rijden</p>
+		
+		<input type="button" value="start" onclick="starten()">
+		<input type="button" value="opnieuw" onclick="opnieuw()">
+		<img id="auto" src="Foto's/autogroen.png" width="40px" height="80px">
+	</form>
+	
+	<script type="text/javascript">
+		var auto = document.getElementById('auto');
+		auto.style.position = 'absolute';
+		auto.style.left = '650px';
+		auto.style.top = '800px';
+		
+		function starten()
+		{
+			auto.style.top = parseInt(auto.style.top) - 5 + 'px';
+		}
+		function opnieuw()
+		{
+			auto.style.top = '800px';
+		}
+	</script>
+</body>
+</html>

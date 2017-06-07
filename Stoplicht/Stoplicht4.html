@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Stoplicht
+	</title>
+	<!-- Kevin Esser -->
+</head>
+<body background = "Foto's/kruising.png">
+	<form>
+		<h1>Stoplicht4.html</h1>
+		<p>Automatisch werkend stoplicht</p>
+		<p>Druk op de juiste knop (maar 1 keer drukken!)</p>
+		
+		<input type="button" value="aanzetten" onclick="aanzetten()">
+		<input type="button" value="knipperen" onclick="knipperen()">
+		<input type="button" value="uitzetten" onclick="uitzetten()">
+		<img id="stoplicht" src="Foto's/stoplichtuit.png" width="20px" height="40px">
+	</form>
+	
+	<script type="text/javascript">
+		var werken;
+		var buitenwerking;
+		var stoplicht = document.getElementById('stoplicht');
+		stoplicht.style.position = 'absolute';
+		stoplicht.style.left = '715px';
+		stoplicht.style.top = '510px';
+		
+		function aanzetten()
+		{
+			clearTimeout(buitenwerking);
+			maakRood();
+			
+			werken = setTimeout(maakGroen, 4000); //na 4 sec(4000 msec) groen maken
+			werken = setTimeout(maakGeel, 8000); //na 8 sec(8000 msec) geel maken
+			werken = setTimeout(aanzetten, 10000); //na 10 sec(10000 msec) opnieuw aanzetten
+		}
+		function knipperen()
+		{
+			clearTimeout(werken);
+			maakGeel();
+			
+			buitenwerking = setTimeout(zetUit, 500);
+			buitenwerking = setTimeout(knipperen, 10000);
+		}
+		function uitzetten()
+		{
+			zetUit();
+			clearTimeout(buitenwerking);
+			clearTimeout(werken);
+		}
+		
+		function maakRood()
+		{
+			stoplicht.src = "Foto's/stoplichtrood.png";
+		}
+		function maakGroen()
+		{
+			stoplicht.src = "Foto's/stoplichtgroen.png";
+		}
+		function maakGeel()
+		{
+			stoplicht.src = "Foto's/stoplichtgeel.png";
+		}
+		function zetUit()
+		{
+			stoplicht.src = "Foto's/stoplichtuit.png";
+		}
+	</script>
+</body>
+</html>

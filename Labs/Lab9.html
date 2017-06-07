@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		JavaScript lab 9
+	</title>
+	<!--
+		Kevin Esser
+	-->
+	<script type="text/javascript">
+		//globale auto varss
+		var type = "economie";
+		var kleur = "blauw";
+		var deuren = 4;
+		var radio = true;
+		var cabriolet = false;
+		
+		function showauto1()
+		{
+			document.writeln("<br>Deze functie toont " + 
+				"globale plus eigen lokale variabelen van aut 1");
+				
+			type = "middenklasse";
+			radio = false;
+			
+			document.writeln
+			(
+				"<br>Auto type is: " + type +
+				"<br>Autokleur is: " + kleur +
+				"<br>Deuren: " + deuren +
+				"<br>Radio: " + radio +
+				"<br>Cabriolet: " + (cabriolet ? 'Ja': 'Nee')
+			);
+		}
+		
+		function showauto2()
+		{
+			document.writeln("<br><br>Deze functie toont " +
+				"globale plus eigen lokale variabelen van auto 2");
+				
+			type = "sport";
+			cabriolet = false;
+			kleur = "rood";
+			deuren = 2;
+			
+			document.writeln
+			(
+				"<br>Auto type is: " + type +
+				"<br>Autokleur is: " + kleur +
+				"<br>Deuren: " + deuren +
+				"<br>Radio: " + radio +
+				"<br>Cabriolet: " + (cabriolet ? 'Ja': 'Nee')
+			);
+		}
+		
+		function showauto3()
+		{
+			document.writeln("<br><br>Deze functie toont " +
+				"globale plus eigen lokale variabelen van auto 3");
+				
+			type = "sport";
+			cabriolet = true;
+			kleur = "rood";
+			deuren = 6;
+			
+			document.writeln
+			(
+				"<br>Auto type is: " + type +
+				"<br>Autokleur is: " + kleur +
+				"<br>Deuren: " + deuren +
+				"<br>Radio: " + radio +
+				"<br>Cabriolet: " + (cabriolet ? 'Ja': 'Nee')
+			);
+		}
+	</script>
+</head>
+<body>
+	<h3>JavaScript Lab 9</h3>
+	<script type="text/javascript">
+		showauto1();
+		showauto2();
+		showauto3();
+	</script>
+</body>
+</html>

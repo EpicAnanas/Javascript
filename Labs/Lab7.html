@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		JavaScript lab 7
+	</title>
+	<!--
+		Kevin Esser
+	-->
+</head>
+<body>
+	<script type="text/javascript">
+		function vertaal(getal)
+		{
+			var text = [];
+			text[0] = "nul";
+			text[1] = "een";
+			text[2] = "twee";
+			text[3] = "drie";
+			text[4] = "vier";
+			text[5] = "vijf";
+			text[6] = "zes";
+			text[7] = "zeven";
+			text[8] = "acht";
+			text[9] = "negen";
+			text[10] = "tien";
+			eindtext = text[getal];
+			return(eindtext)
+		}
+	</script>
+</head>
+<body>
+	<h3>
+		Voorbeeld van een functie
+	</h3>
+	<script type="text/javascript">
+		var getal = prompt("voer een getal tussen 1 tot 10 in!");
+		vertaal(getal)
+		document.writeln("Uw " + getal + " is vertaald: " + eindtext + "<br>");
+	</script>
+</body>
+</html>

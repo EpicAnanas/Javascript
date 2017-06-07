@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		JavaScript lab 1
+	</title>
+	<!--
+		Kevin Esser
+	-->
+</head>
+<body>
+	<script type="text/javascript">
+		var klantnaam = prompt("Voer je eigen naam in", "Naam!");
+		var aantal = parseInt(prompt("aantal boeken te bestellen?"));
+		var titel = "JavaScripts";
+		var prijs = 29.90;
+		var bedrag = aantal * prijs;
+		var btw = bedrag / 100 * 6;
+		var totaal = bedrag + btw;
+		
+		document.writeln("Bedankt voor je bestelling " + klantnaam + "<br>");
+		document.writeln("Boektitel is: " + titel + "<br>");
+		document.writeln("Aantal te bestellen: " + aantal + "<br>");
+		document.writeln("Prijs per boek is:" + prijs.toFixed(2) + "<br>");
+		document.writeln("Bedrag is: " + bedrag + "<br>");
+		document.writeln("BTW is 6% van bedrag: " + btw + "<br>");
+		document.writeln("Totaal te betalen is bedrag plus BTW: " + totaal + "<br>");
+	</script>
+</body>
+</html>

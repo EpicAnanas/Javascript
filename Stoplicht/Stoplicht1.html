@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		Stoplicht
+	</title>
+	<!-- Kevin Esser -->
+</head>
+<body>
+	<h1>Stoplicht1.html</h1>
+	<p>Verwisselen van plaatjes</p>
+	<img id="stoplicht" onclick="veranderStoplicht()" src="Foto's/stoplichtrood.png">
+	<p>Klik op het stoplicht om het te veranderen.</p>
+	
+	<script type="text/javascript">
+		function veranderStoplicht()
+		{
+			var stoplicht = document.getElementById('stoplicht');
+			
+			if(stoplicht.src.match("stoplichtrood"))
+			{
+				stoplicht.src = "Foto's/stoplichtgroen.png";
+			}
+			else
+			{
+				stoplicht.src = "Foto's/stoplichtrood.png";
+			}
+		}
+	</script>
+</body>
+</html>

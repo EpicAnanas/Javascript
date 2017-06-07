@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		JavaScript lab 6
+	</title>
+	<!--
+		Kevin Esser
+	-->
+</head>
+<body>
+	<script type="text/javascript">
+		var text;
+		var betaalmethode = prompt("Wat is uw betaalmethode? (Visa, Mastercard of ING)");
+		switch(betaalmethode)
+		{
+			case "Visa":
+				var leenbedragVisa = prompt("Wat is uw leenbedrag?");
+				if(leenbedragVisa > 800)
+				{
+					alert("Leenbedrag over kredietlimiet van Visa. Max. bedrag is 800 euro");
+				}
+				else
+				{
+					alert("U hebt " + leenbedragVisa + " euro's geleend");
+				}
+				break;
+			case "Mastercard":
+				var leenbedragMastercard = prompt("Wat is uw leenbedrag?");
+				if(leenbedragMastercard > 1000)
+				{
+					alert("Leenbedrag over kredietlimiet van Mastercard. Max. bedrag is 1000 euro");
+				}
+				else
+				{
+					alert("U hebt " + leenbedragMastercard + " euro's geleend");
+				}
+				break;
+			case "ING":
+				var leenbedragING = prompt("Wat is uw leenbedrag?");
+				if(leenbedragING > 1500)
+				{
+					alert("Leenbedrag over kredietlimiet van ING. Max. bedrag is 1500 euro");
+				}
+				else
+				{
+					alert("U hebt " + leenbedragING + " euro's geleend");
+				}
+				break;
+			default:
+				alert("Uw credit card wordt niet geaccepteerd");
+		} 
+	</script>
+</body>
+</html>

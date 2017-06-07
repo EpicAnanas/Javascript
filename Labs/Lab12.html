@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		JavaScript lab 12
+	</title>
+	<!--
+		Kevin Esser
+	-->
+	<script type="text/javascript" src="myjavascriptLab12.js"></script>
+</head>
+<body>
+	<h3>JavaScript Lab 12</h3>
+	<script type="text/javascript">
+		var doorgaan = true;
+		var index = 0;
+		
+		while(doorgaan)
+		{
+			index++;
+			resultaat = toets(index);
+			document.writeln("Vraag " + index + " was " + resultaat + "<br>");
+			if(index == 10) break;
+			doorgaan = confirm(resultaat + "Wil je doorgaan?");
+		}
+		
+		document.writeln("Jou score is " + score + "<br>");
+	</script>
+</body>
+</html>

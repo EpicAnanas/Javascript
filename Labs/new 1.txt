@@ -1,0 +1,15 @@
+<?php
+	$user = 'root';
+	$pass = ' ';
+	
+	try{
+		$conn = new PDO("mysql:host=localhost;dbname=piet", $user, $pass);
+	}catch(PDOException $error)
+	{
+		echo $error;
+	}
+	
+	$selectUser = $conn->prepare("SELECT * FROM users");
+	$selectUser->execute();
+	$users = $selectUser->fetchall();
+?>

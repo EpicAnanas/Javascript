@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		JavaScript lab 3
+	</title>
+	<!--
+		Kevin Esser
+	-->
+</head>
+<body>
+	<script type="text/javascript">
+		var team = new Array();
+		team[0] = new Array();
+		team[1] = new Array();
+		team[2] = new Array();
+		
+		team[0][0] = 1;
+		team[0][1] = 2;
+		team[0][2] = 3;
+		team[0][3] = 4;
+		team[0][4] = 3;
+		gemiddelde1 = team[0][0] + team[0][1] + team[0][2] + team[0][3] + team[0][4];
+		gemiddelde1 = gemiddelde1 / 5;
+		
+		team[1][0] = 4;
+		team[1][1] = 5;
+		team[1][2] = 6;
+		team[1][3] = 7;
+		team[1][4] = 2;
+		gemiddelde2 = team[1][0] + team[1][1] + team[1][2] + team[1][3] + team[1][4];
+		gemiddelde2 = gemiddelde2 / 5;
+		
+		team[2][0] = 7;
+		team[2][1] = 6;
+		team[2][2] = 5;
+		team[2][3] = 4;
+		team[2][4] = 1;
+		gemiddelde3 = team[2][0] + team[2][1] + team[2][2] + team[2][3] + team[2][4];
+		gemiddelde3 = gemiddelde3 / 5;
+		
+		//Nog van Lab2.
+		//document.write("scoren team 0: " + team[0][0] + " " + team[0][1] + " " + team[0][2] + " " + team[0][3] + " " + team[0][4] + " -- Gemiddelde is: " + gemiddelde1 + "<br> ");
+		//document.write("scoren team 0: " + team[1][0] + " " + team[1][1] + " " + team[1][2] + " " + team[1][3] + " " + team[1][4] + " -- Gemiddelde is: " + gemiddelde2 + " <br> ");
+		//document.write("scoren team 0: " + team[2][0] + " " + team[2][1] + " " + team[2][2] + " " + team[2][3] + " " + team[2][4] + " -- Gemiddelde is: " + gemiddelde3 + " <br> ");
+		
+		document.writeln("<table border = 2>" +
+		"<tr>" +
+					"<td> Scoren team 0: </td>" +
+					"<td>" + team[0][0] + "</td>" +
+					"<td>" + team[0][1] + "</td>" +
+					"<td>" + team[0][2] + "</td>" +
+					"<td>" + team[0][3] + "</td>" +
+					"<td>" + team[0][4] + "</td>" +
+					"<td>" + "Gemiddeldescoren is: " + gemiddelde1 + "</td>" +
+		"</tr>" +
+		
+		"<tr>" +
+					"<td> Scoren team 0: </td>" +
+					"<td>" + team[1][0] + "</td>" +
+					"<td>" + team[1][1] + "</td>" +
+					"<td>" + team[1][2] + "</td>" +
+					"<td>" + team[1][3] + "</td>" +
+					"<td>" + team[1][4] + "</td>" +
+					"<td>" + "Gemiddeldescoren is: " + gemiddelde2 + "</td>" +
+		"</tr>" +
+		
+		"<tr>" +
+					"<td> Scoren team 0: </td>" +
+					"<td>" + team[2][0] + "</td>" +
+					"<td>" + team[2][1] + "</td>" +
+					"<td>" + team[2][2] + "</td>" +
+					"<td>" + team[2][3] + "</td>" +
+					"<td>" + team[2][4] + "</td>" +
+					"<td>" + "Gemiddeldescoren is: " + gemiddelde3 + "</td>" +
+		"</tr>" +
+		"</table>"
+		); 
+	</script>
+</body>
+</html>

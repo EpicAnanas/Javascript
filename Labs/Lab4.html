@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>
+		JavaScript lab 4
+	</title>
+	<!--
+		Kevin Esser
+	-->
+</head>
+<body>
+	<script type="text/javascript">
+		//lab1
+		var klantnaam = prompt("Voer je eigen naam in", "Naam!");
+		var aantal = parseInt(prompt("aantal boeken te bestellen?"));
+		var titel = "JavaScripts";
+		var prijs = 29.90;
+		var bedrag = aantal * prijs;
+		var btw = bedrag / 100 * 6;
+		var totaal = bedrag + btw;
+		//lab4
+		var bezorgkosten = 15;
+		var woonplaats = prompt("Voer je woonplaats in");
+		var postcode = prompt("Voer je postcode in");
+		
+		if(postcode >= '1000AA' && postcode <= '2000BB')
+		{
+			bezorgkosten = 0;
+			alert("U betaald geen bezorgkosten!");
+		}
+		else
+		{
+			totaal = totaal + bezorgkosten;
+		}
+		
+		document.writeln("Bedankt voor je bestelling " + klantnaam + "<br>");
+		document.writeln("Woonplaats: " + woonplaats + "<br>");
+		document.writeln("Postcode: " + postcode + "<br>");
+		document.writeln("Boektitel is: " + titel + "<br>");
+		document.writeln("Aantal te bestellen: " + aantal + "<br>");
+		document.writeln("Prijs per boek is:" + prijs.toFixed(2) + "<br>");
+		document.writeln("Bedrag is: " + bedrag + "<br>");
+		document.writeln("BTW is 6% van bedrag: " + btw + "<br>");
+		document.writeln("Bezorgkosten: " + bezorgkosten + "<br>");
+		document.writeln("Totaal te betalen is bedrag plus BTW: " + totaal + "<br>");
+	</script>
+</body>
+</html>
